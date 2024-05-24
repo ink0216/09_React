@@ -20,7 +20,8 @@ const ClickCount = ()=>{
 
 // 함수형 컴포넌트 만드는 방법
 // 1. 함수 생성하기
-const FunctionEx = ()=>{
+const FunctionEx = ()=>{ 
+    //외부에서 이 함수를 호출하면 return 구문 내에 있는 것을 리턴해주는 함수
     return (
         /* 리액트 컴포넌트에 class 추가 시 class=""가 아닌
             className이라고 작성해야 한다!!!

@@ -12,7 +12,17 @@ import ClassComponent from './components/R01_ClassComponent';
 import FunctionComponent from './components/R02_FunctionComponent';
 //가져온 것을 여기서는 FunctionComponent라고 부를거다
 
-function App() {
+import Props1 from './components/R03_Props1';
+
+import Props2 from './components/R04_Props2';
+
+import Props3 from './components/R05_Props3';
+
+import State1 from './components/R06_State1';
+
+import State2 from './components/R07_State2';
+
+function App() { //return구문 전체를 Component라고 부른다
   const temp=100;
   return (
     /* (중요!)
@@ -74,6 +84,7 @@ function App() {
     // </>
     <>
     {/* ClassComponent를 현재 위치에 렌더링하겠다. */}
+
       <ClassComponent/>
       <ClassComponent/>
       <ClassComponent/>
@@ -87,11 +98,39 @@ function App() {
         </li>
       </ul>
       <hr/>
-      <FunctionComponent/>
+      <FunctionComponent/> 
+      <Props1 num='1' name='홍길동'age='20' score='90'/>
+      {/* 자식 컴포넌트에게 
+      값을 전달해준다. 그럼 자동으로 객체 형태로 k:v형태로 들어간다
+      props에 */}
+      <hr/>
+      {/* 컴포넌트는 재활용 할 수 있는 특징이 있다.!!! 
+        하나의 틀(양식) 잡아놓고 이렇게 값만 달라지게 값 전달할 수 있다.
+      */}
+      <Props1 num='2' name='강찬혁' age='999' score='70'/>
+      {/* for문으로 db에서 조회해와서 막 돌려서 출력하는 것도 할 수 있다. */}
+      <hr/>
+      <Props2 name='강감찬' age='72' gender='남자'/>
+      <Props2 name='천추태후' age='66' gender='여자'/>
+      <hr/>
+      <Props3 name='고길동'/>
+      <Props3 name='김영희'/>
+      {/* age는 child에서 만들어냈기 때문에 전달 안해도 된다 
+      name은 App이 전달해줬고,
+      age는 Child가 전달해줬다.
+
+      리액트의 단점 : 여기저기서 값을 보내주고 해서 이 값은 어디서 왔는지 찾기 힘들다.
+      근데 잘 활용하면 컴포넌트를 활용해서 원하는 화면을 금방금방 만들 수 있따.
+      */}
+      <hr/>
+      <State1/>
+      <hr/>
+      <State2 init="100" step="5"/>
+      {/* init이랑 step 두 개를 전달해야한다 */}
     </>
   );
 }
-
+//외부에서 이걸 수입하면 우리는 이걸 수출할거야
 export default App; //export==내보내다
 //이 js에서는 App이라는 함수를 수출할거다
 //어디로 ? 이거를 수입한index.js로

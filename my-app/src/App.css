@@ -1,1 +1,13 @@
 .red{color : red;}
+.info{
+    border: 2px solid green;
+    margin: 10px;
+    width: 400px;
+    padding: 5px;
+}
+.count-container{
+    display: flex;
+}
+.count-container > *{
+    margin : 20px 10px;
+}
