@@ -22,6 +22,12 @@ import State1 from './components/R06_State1';
 
 import State2 from './components/R07_State2';
 
+import State3 from './components/R08_State3';
+
+import Context1 from './components/R09_Context1';
+
+import Context2 from './components/R10_Context2';
+
 function App() { //return구문 전체를 Component라고 부른다
   const temp=100;
   return (
@@ -120,13 +126,19 @@ function App() { //return구문 전체를 Component라고 부른다
       age는 Child가 전달해줬다.
 
       리액트의 단점 : 여기저기서 값을 보내주고 해서 이 값은 어디서 왔는지 찾기 힘들다.
-      근데 잘 활용하면 컴포넌트를 활용해서 원하는 화면을 금방금방 만들 수 있따.
+      근데 잘 활용하면 컴포넌트를 활용해서 원하는 화면을 금방금방 만들 수 있다.
       */}
       <hr/>
       <State1/>
       <hr/>
-      <State2 init="100" step="5"/>
+      <State2 init="52" step="10"/>
       {/* init이랑 step 두 개를 전달해야한다 */}
+      <hr/>
+      <State3/>
+      <hr/>
+      <Context1/>
+      <hr/>
+      <Context2/>
     </>
   );
 }
@@ -138,4 +150,15 @@ export default App; //export==내보내다
 //js안에 html 코드가 들어있는 형태
 //이 내부의 html 작성법을 JSX라고 한다
 //html도 xml과 표기법 동일해서(태그를 이용하는 작성법)
+/* props
+리액트는 컴포넌트(함수의 리턴값이 하나의 요소가 된 것) 단위로 돼있다.
+함수를 export하고 필요한 곳에서 그 함수를 import해서 호출할 수 있다.->그 자리에 inport해왔던 함수의 반환값이 들어오게된다
+App(상위 컴포넌트)에서 하위 컴포넌트에게 값을 전달하는 것 == props
+props는 한번만 할 수 있는 게 아니라 계속 할 수 있다.받은 컴포넌트를 또 자손 컴포넌트에게 또 줄 수 있다.(props를 계속 대물림 해주는 것)
 
+state
+컴포넌트는 '상태(state)' 라는 전역변수가 있다. 상태(state)값이 변하면 화면을 랜더링을 다시하는 리랜더링을 진행한다.
+함수형 컴포넌트는 useState를 별도로 import 받아서 useStATE를 이용해서 상태의 변화를 감지한다.
+
+
+*/

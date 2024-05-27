@@ -31,7 +31,7 @@ const ChildComponent = (props //App에서 전달 받은 값이다
 )=>{
     return(
         <> {/* App에서 전달받은 값을 후손에게 다시 전달해주는 것 == Props Drilling*/}
-            <GrandChildComponent 
+            <GrandChildComponent  // 받은 것을 그대로 보내주기
             name={props.name}
             age  = {props.name === '김영희' ? 20 : 25}
 
