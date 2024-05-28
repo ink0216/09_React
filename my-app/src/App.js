@@ -28,6 +28,8 @@ import Context1 from './components/R09_Context1';
 
 import Context2 from './components/R10_Context2';
 
+import Context3 from './components/R11_Context3/Parent';
+
 function App() { //return구문 전체를 Component라고 부른다
   const temp=100;
   return (
@@ -139,6 +141,8 @@ function App() { //return구문 전체를 Component라고 부른다
       <Context1/>
       <hr/>
       <Context2/>
+      <hr/>
+      <Context3/>
     </>
   );
 }

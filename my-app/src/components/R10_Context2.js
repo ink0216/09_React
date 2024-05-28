@@ -21,6 +21,8 @@ const GrandChild = () => {
         <>
             <h3>GrandChild Component 입니다.</h3>
             <input type='number' value={number} onChange={e=>{setNumber(e.target.value)}}
+            //입력한 값으로 부모의 값을 바꾸겠다.
+            
             //input의 value == 초기값
             //값이 바뀔 때 마다 함수를 실행하겠다.
             />
@@ -52,8 +54,8 @@ const Child = () => {
 const Parent = () => {
     //상태 변수 선언
     const [number, setNumber] = useState(0);
-    //컴포넌트 상태가 바뀌면 리랜더링한다.
-
+    //컴포넌트 상태가 바뀌면 해당 컴포넌트에 대해서 리랜더링한다.
+    //자식이 부모의 값을 바꾸면 부모가 리랜더링 되면서 자식이 바꾼 값이 부모까지 올라온다.
     return(
         //js객체 {"number" : number, "setNumber" : setNumber}
         <TestContext.Provider value={{number, setNumber}}

@@ -40,7 +40,8 @@ const Parent = ()=>{
     return(
         /* Context 객체를 이용해서 하위 컴포넌트에 value를 제공하기 */
         //컴포넌트 객체가 저장된 변수 TestContext
-        <TestContext.Provider value='Parent에서 전달한 값'>
+        <TestContext.Provider value='Parent에서 전달한 값'>  {/* 문자열을 제공해주겠다. */}
+        {/* value로는 무조건 하나만 전달할 수 있다. ->여러 개 보내고싶으면 묶으면 된다*/}
             {/* 이 밑에 전체적으로 값을 제공할거야 */}
             <h1>Parent Component 입니다.</h1>
             <Child/>
