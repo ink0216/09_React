@@ -143,6 +143,7 @@ function App() { //return구문 전체를 Component라고 부른다
       <Context2/>
       <hr/>
       <Context3/>
+
     </>
   );
 }
