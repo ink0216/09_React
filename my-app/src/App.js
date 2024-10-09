@@ -32,7 +32,7 @@ import Context3 from './components/R11_Context3/Parent';
 
 function App() { //return구문 전체를 Component라고 부른다
   const temp=100;
-  return (
+  return ( //JSX : JS+XML (JS에서 XML 표기법인 태그 표기법을 사용한다) 
     /* (중요!)
     자바든, JS든 가리지 않고 return하면 딱 한 개만 반환가능
     여러 개를 리턴하고싶으면 여기에서도 똑같이 묶어서 반환해야한다

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; //ReactDOM == virtual DOM
+// from앞의 것이 수입해서 여기서 사용할 이름
 import './index.css';
-import App from './App';
+import App from './App'; //App.js 파일을 가져온거다
 import reportWebVitals from './reportWebVitals';
 // import는 js에서도 할 수 있다.
 

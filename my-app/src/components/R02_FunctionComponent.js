@@ -2,7 +2,7 @@
 import React,{useState} from 'react'; /* 자동완성 빠르게 하고 싶으면 imr하고 자동완성 하면된다 */
 
 const ClickCount = ()=>{
-    const [count,setCount] = useState(0);
+    const [count,setCount] = useState(100); //count의 초기값으로 100 설정
     /* 한 번에 변수 두 개를 선언하는 것
     useState도 함수인데 이걸 호출하면 배열이 반환된다
     그 배열 0번에 count, 1번에 setCount가 들어간다 */
